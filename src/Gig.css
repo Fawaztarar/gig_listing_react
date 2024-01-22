@@ -1,49 +1,102 @@
 /* Gig.css */
+/* Resetting some default margin and padding */
+body, h1, h2, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Gig container styles */
 .gig-container {
     display: flex;
-    border: 1px solid #ddd;
+    flex-direction: column;
+    border: 2px solid #f1f1f1;
     padding: 20px;
     margin: 20px;
     align-items: center;
-  }
-  
-  .band-image {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+
+/* Hover effect for gig container */
+.gig-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Band image styles */
+.band-image {
     width: 150px;
     height: 150px;
-    border-radius: 8px;
-    margin-right: 20px;
-  }
-  
-  .details-container {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+/* Details container styles */
+.details-container {
     flex: 1;
-  }
-  
-  .band-name {
-    font-size: 1.5em;
+}
+
+/* Band name styles */
+.band-name {
+    font-size: 1.8em;
     color: #333;
-  }
-  
-  .event-description {
+    margin-bottom: 8px;
+}
+
+/* Event description styles */
+.event-description {
     font-style: italic;
     color: #666;
-  }
-  
-  .event-time,
-  .event-location {
+}
+
+/* Event time styles */
+.event-time {
+    margin-top: 10px;
+    font-size: 1.2em; /* Increased font size */
+    /* Color remains unchanged */
+}
+
+/* Event location styles */
+.event-location {
     margin-top: 5px;
-    color: #777;
-  }
-  
-  /* Center the title */
-  .app-title {
+    color: #777; /* Color remains unchanged */
+}
+
+/* Title styles */
+.app-title {
     text-align: center;
-  }
-  
-  /* Center the gigs list */
-  .gigs-list {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Gigs list container styles */
+.gigs-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animation for hover effect */
+.gig-container {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .gig-container {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
