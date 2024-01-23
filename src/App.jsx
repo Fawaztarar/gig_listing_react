@@ -19,6 +19,12 @@ const App = () => {
           eventTime="2024-02-15, 8:30 PM"
           eventLocation="Dance Club"
         />
+        <Gig
+          bandName="Rockin' Group"
+          eventDescription="Rock out with Rockin' Group as they perform their latest hits and greatest classics. It's going to be a wild night!"
+          eventTime="2024-03-01, 9:00 PM"
+          eventLocation="Stadium"
+        />
         {/* Add more Gig components for additional listings */}
       </div>
     </div>
