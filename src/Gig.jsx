@@ -1,10 +1,17 @@
 // Gig.jsx
-import React from 'react';
+
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Gig.css';
 import bandImage from "./assets/band.jpg";
 
 const Gig = ({ bandName, eventDescription, eventTime, eventLocation }) => {
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleFavoriteToggle = () => {
+    setIsFavorited(!isFavorited);
+  };
+
   return (
     <div className="gig-container">
       <img className="band-image" src={bandImage} alt={bandName} />
@@ -13,6 +20,14 @@ const Gig = ({ bandName, eventDescription, eventTime, eventLocation }) => {
         <p className="event-description">{eventDescription}</p>
         <p className="event-time">{eventTime}</p>
         <p className="event-location">{eventLocation}</p>
+        
+        {/* Favorite button */}
+        <button onClick={handleFavoriteToggle}>
+          {isFavorited ? 'Unfavorite' : 'Favorite'}
+        </button>
+
+        {/* Display favorite status */}
+        {isFavorited && <p className="favorite-status">Favorited!</p>}
       </div>
     </div>
   );
@@ -26,6 +41,7 @@ Gig.propTypes = {
 };
 
 export default Gig;
+
 
 
 
