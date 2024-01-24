@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Gig.css';
-import bandImage from "./assets/band.jpg";
+// import bandImage from "./assets/band.jpg";
 
-const Gig = ({ bandName, eventDescription, eventTime, eventLocation }) => {
+const Gig = ({ bandImage, bandName, eventDescription, eventTime, eventLocation }) => {
   const [isFavorited, setIsFavorited] = useState(false);
 
   const handleFavoriteToggle = () => {
