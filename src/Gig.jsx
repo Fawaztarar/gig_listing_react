@@ -35,6 +35,7 @@ const Gig = ({ bandName, eventDescription, eventTime, eventLocation }) => {
 
 Gig.propTypes = {
   bandName: PropTypes.string.isRequired,
+  bandImage: PropTypes.string.isRequired,
   eventDescription: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
   eventLocation: PropTypes.string.isRequired,
