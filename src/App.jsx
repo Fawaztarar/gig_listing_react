@@ -1,6 +1,9 @@
 // App.jsx
+
 import React, { useState } from 'react';
 import Gig from './Gig';
+import './App.css'; // Assuming you have a CSS file for App
+
 const App = () => {
   const [gigs, setGigs] = useState([
     {
@@ -41,36 +44,36 @@ const App = () => {
     },
     // Add more Gig objects for additional listings
   ]);
-  // Function to toggle the favorite status of a gig
+
   const toggleFavorite = (id) => {
-    setGigs((prevGigs) =>
-      prevGigs.map((gig) =>
-        gig.id === id ? { ...gig, favorited: !gig.favorited } : gig
-      )
-    );
+    setGigs(gigs.map(gig => 
+      gig.id === id ? { ...gig, favorited: !gig.favorited } : gig
+    ));
   };
-  // Sort gigs so that favorited gigs come first
+
   const sortedGigs = gigs.slice().sort((a, b) => (b.favorited ? 1 : -1));
+
   return (
     <div className="app-container">
       <h1 className="app-title">Upcoming Gigs</h1>
       <div className="gigs-list">
         {sortedGigs.map((gig) => (
-          <Gig key={gig.id}
-          bandName = {gig.bandName}
-          bandImage = {gig.bandImage}
-          eventTime= {gig.eventTime}
-          eventDescription = {gig.eventDescription}
-          eventLocation = {gig.eventLocation}
-          favorited= {gig.favorited}
-          onToggleFavorite={toggleFavorite} />
+          <Gig 
+            key={gig.id}
+            bandName={gig.bandName}
+            bandImage={gig.bandImage}
+            eventTime={gig.eventTime}
+            eventDescription={gig.eventDescription}
+            eventLocation={gig.eventLocation}
+            favorited={gig.favorited}
+            onToggleFavorite={() => toggleFavorite(gig.id)}
+          />
         ))}
       </div>
     </div>
   );
 };
+
 export default App;
-
-
 
 
