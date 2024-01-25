@@ -1,4 +1,6 @@
 /* Gig.css */
+
+
 /* Resetting some default margin and padding */
 body, h1, h2, p, img {
     margin: 0;
@@ -72,6 +74,20 @@ body {
     margin-top: 5px;
     color: #777; /* Color remains unchanged */
 }
+
+/* Heart button styles */
+.heart-button {
+    font-size: 24px; /* Adjust size as needed */
+    color: #000; /* Color for the not favorited heart */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+  
+  .heart-button.favorited {
+    color: red; /* Color for the favorited heart */
+}
+  
 
 /* Title styles */
 .app-title {
