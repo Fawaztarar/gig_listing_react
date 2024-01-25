@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Gig from './Gig';
-import './App.css'; // Assuming you have a CSS file for App
+import './App.css'; 
 
 const App = () => {
   const [gigs, setGigs] = useState([

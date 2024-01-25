@@ -19,7 +19,6 @@ const Gig = ({ bandImage, bandName, eventDescription, eventTime, eventLocation, 
         <button className={`heart-button ${favorited ? 'favorited' : ''}`} onClick={onToggleFavorite}>
         {favorited ? '♥' : '♡'}
       </button>
-
         {favorited && <p className="favorite-status">Liked!</p>}
       </div>
     </div>
